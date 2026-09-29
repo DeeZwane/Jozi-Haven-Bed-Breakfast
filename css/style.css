@@ -49,3 +49,5 @@ legend{font-weight:600;padding:0 .3rem}
 footer{background:var(--ink);color:#cfc8dd;padding:2rem 0;font-size:.92rem}
 @media(max-width:520px){.row{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.room img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover}
+.hero.photo{background:linear-gradient(rgba(61,37,96,.75),rgba(61,37,96,.75)),url("../images/hero.jpg") center/cover}
