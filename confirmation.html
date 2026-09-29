@@ -1,0 +1,20 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"><title>Request received | Jozi Haven</title></head>
+<body><header class="site"><div class="wrap"><a class="brand" href="index.html">Jozi Haven</a>
+<nav aria-label="Main"><ul><li><a href="index.html#rooms">Rooms</a></li><li><a href="index.html#services">Guest services</a></li><li><a href="index.html#location">Location</a></li><li><a href="index.html#contact">Contact</a></li><li><a href="booking.html">Book</a></li></ul></nav></div></header>
+<main><section><div class="wrap">
+<h1 style="font-size:2.4rem">Request received</h1>
+<p>Thank you. We will confirm availability by email.</p>
+<div class="summary"><dl id="s"></dl></div>
+<p style="margin-top:1.5rem"><a class="btn" href="index.html">Back to home</a></p>
+</div></section></main><footer><div class="wrap"><p>Jozi Haven Bed &amp; Breakfast and Guest House, Johannesburg, Gauteng. Demonstration project: all details are fictional.</p></div></footer>
+<script>
+/* Reads the form values from the URL. Replace with an API call when a back end is added. */
+(function(){var p=new URLSearchParams(location.search),s=document.getElementById("s"),
+f=[["Name","name"],["Email","email"],["Check-in","checkin"],["Check-out","checkout"],["Guests","guests"],["Room","room"]];
+f.forEach(function(x){var v=p.get(x[1]);if(v){var t=document.createElement("dt"),d=document.createElement("dd");t.textContent=x[0];d.textContent=v;s.append(t,d)}});
+var sv=p.getAll("svc");if(sv.length){var t=document.createElement("dt"),d=document.createElement("dd");t.textContent="Services";d.textContent=sv.join(", ");s.append(t,d)}
+})();
+</script></body></html>
