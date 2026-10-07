@@ -1,13 +1,28 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Request a booking | Jozi Haven</title>
+<meta name="theme-color" content="#27403A">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css"><title>Request a booking | Jozi Haven</title></head>
-<body><header class="site"><div class="wrap"><a class="brand" href="index.html">Jozi Haven</a>
-<nav aria-label="Main"><ul><li><a href="index.html#rooms">Rooms</a></li><li><a href="index.html#services">Guest services</a></li><li><a href="index.html#location">Location</a></li><li><a href="index.html#contact">Contact</a></li><li><a href="booking.html">Book</a></li></ul></nav></div></header>
-<main><section><div class="wrap">
-<h1 style="font-size:2.4rem">Request a booking</h1>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">Jozi Haven</a>
+<button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+<nav id="site-nav" aria-label="Main"><ul><li><a href="index.html#rooms">Rooms</a></li><li><a href="index.html#services">Guest services</a></li><li><a href="index.html#location">Location</a></li><li><a href="index.html#contact">Contact</a></li><li><a href="booking.html" class="nav-book" aria-current="page">Book</a></li></ul></nav>
+</div></header>
+<main id="main">
+<div class="wrap page">
+<h1>Request a booking</h1>
 <p>Fill in your stay details. We confirm every request by email.</p>
-<form action="confirmation.html" method="get">
+<div class="booking">
+<form id="booking" action="confirmation.html" method="get">
 <label>Full name<input name="name" required autocomplete="name"></label>
 <label>Email<input type="email" name="email" required autocomplete="email"></label>
 <div class="row">
@@ -15,8 +30,8 @@
 <label>Check-out<input type="date" name="checkout" required></label>
 </div>
 <div class="row">
-<label>Guests<input type="number" name="guests" min="1" max="4" value="2" required></label>
 <label>Room<select name="room"><option>Garden Room</option><option>Jacaranda Room</option><option>Family Room</option></select></label>
+<label>Guests<input type="number" name="guests" min="1" max="4" value="2" required aria-describedby="guest-hint"><span class="hint" id="guest-hint"></span></label>
 </div>
 <fieldset><legend>Guest services</legend>
 <label class="check"><input type="checkbox" name="svc" value="Breakfast dietary needs"> Breakfast dietary needs</label>
@@ -29,4 +44,22 @@
 <button class="btn" type="submit">Send request</button>
 <p class="note">This demo has no back end yet, so nothing is stored.</p>
 </form>
-</div></section></main><footer><div class="wrap"><p>Jozi Haven Bed &amp; Breakfast and Guest House, Johannesburg, Gauteng. Demonstration project: all details are fictional.</p></div></footer></body></html>
+<aside class="summary" aria-live="polite">
+<h2>Your stay</h2>
+<dl>
+<dt>Room</dt><dd id="sum-room"></dd>
+<dt>Length</dt><dd id="sum-stay"></dd>
+<dt>Estimate</dt><dd id="sum-total" class="total"></dd>
+</dl>
+<p class="note">Breakfast is included. We confirm the final amount by email.</p>
+</aside>
+</div>
+</div>
+</main>
+<footer><div class="wrap">
+<p>Jozi Haven Bed &amp; Breakfast and Guest House, Johannesburg, Gauteng.</p>
+<p>Demonstration project: all details are fictional. <a href="booking.html">Request a booking</a></p>
+</div></footer>
+<script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,20 +1,43 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Request received | Jozi Haven</title>
+<meta name="theme-color" content="#27403A">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:wght@500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css"><title>Request received | Jozi Haven</title></head>
-<body><header class="site"><div class="wrap"><a class="brand" href="index.html">Jozi Haven</a>
-<nav aria-label="Main"><ul><li><a href="index.html#rooms">Rooms</a></li><li><a href="index.html#services">Guest services</a></li><li><a href="index.html#location">Location</a></li><li><a href="index.html#contact">Contact</a></li><li><a href="booking.html">Book</a></li></ul></nav></div></header>
-<main><section><div class="wrap">
-<h1 style="font-size:2.4rem">Request received</h1>
-<p>Thank you. We will confirm availability by email.</p>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">Jozi Haven</a>
+<button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+<nav id="site-nav" aria-label="Main"><ul><li><a href="index.html#rooms">Rooms</a></li><li><a href="index.html#services">Guest services</a></li><li><a href="index.html#location">Location</a></li><li><a href="index.html#contact">Contact</a></li><li><a href="booking.html" class="nav-book">Book</a></li></ul></nav>
+</div></header>
+<main id="main">
+<div class="wrap page">
+<div id="received" hidden>
+<h1>Request received</h1>
+<p>Thank you. We will confirm availability by email to <strong id="to"></strong>.</p>
+<p>Reference <span class="reference" id="ref"></span></p>
 <div class="summary"><dl id="s"></dl></div>
-<p style="margin-top:1.5rem"><a class="btn" href="index.html">Back to home</a></p>
-</div></section></main><footer><div class="wrap"><p>Jozi Haven Bed &amp; Breakfast and Guest House, Johannesburg, Gauteng. Demonstration project: all details are fictional.</p></div></footer>
-<script>
-/* Reads the form values from the URL. Replace with an API call when a back end is added. */
-(function(){var p=new URLSearchParams(location.search),s=document.getElementById("s"),
-f=[["Name","name"],["Email","email"],["Check-in","checkin"],["Check-out","checkout"],["Guests","guests"],["Room","room"]];
-f.forEach(function(x){var v=p.get(x[1]);if(v){var t=document.createElement("dt"),d=document.createElement("dd");t.textContent=x[0];d.textContent=v;s.append(t,d)}});
-var sv=p.getAll("svc");if(sv.length){var t=document.createElement("dt"),d=document.createElement("dd");t.textContent="Services";d.textContent=sv.join(", ");s.append(t,d)}
-})();
-</script></body></html>
+<div class="actions"><a class="btn" href="index.html">Back to home</a><button class="btn alt" type="button" onclick="window.print()">Print this page</button></div>
+</div>
+<div id="missing" hidden>
+<h1>No booking details found</h1>
+<p>This page shows the request you send from the booking form.</p>
+<p><a class="btn" href="booking.html">Request a booking</a></p>
+</div>
+<noscript><h1>Request received</h1><p>Thank you. We will confirm availability by email.</p></noscript>
+</div>
+</main>
+<footer><div class="wrap">
+<p>Jozi Haven Bed &amp; Breakfast and Guest House, Johannesburg, Gauteng.</p>
+<p>Demonstration project: all details are fictional. <a href="booking.html">Request a booking</a></p>
+</div></footer>
+<script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,43 +1,111 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jozi Haven Bed &amp; Breakfast | Johannesburg guest house</title>
+<meta name="description" content="Six quiet rooms, a full breakfast and easy access to Johannesburg. Book direct with Jozi Haven.">
+<meta name="theme-color" content="#27403A">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<title>Jozi Haven Bed &amp; Breakfast | Johannesburg guest house</title>
-<meta name="description" content="Six quiet rooms, a full breakfast and easy access to Johannesburg. Book direct with Jozi Haven."></head>
-<body><header class="site"><div class="wrap"><a class="brand" href="index.html">Jozi Haven</a>
-<nav aria-label="Main"><ul><li><a href="index.html#rooms">Rooms</a></li><li><a href="index.html#services">Guest services</a></li><li><a href="index.html#location">Location</a></li><li><a href="index.html#contact">Contact</a></li><li><a href="booking.html">Book</a></li></ul></nav></div></header>
-<main>
-<div class="hero"><div class="wrap">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">Jozi Haven</a>
+<button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+<nav id="site-nav" aria-label="Main"><ul><li><a href="index.html#rooms">Rooms</a></li><li><a href="index.html#services">Guest services</a></li><li><a href="index.html#location">Location</a></li><li><a href="index.html#contact">Contact</a></li><li><a href="booking.html" class="nav-book">Book</a></li></ul></nav>
+</div></header>
+<main id="main">
+<div class="hero"><div class="wrap hero-grid">
+<div>
 <h1>A quiet six-room stay in the middle of Johannesburg</h1>
-<p>Breakfast is included, check-in is flexible, and you deal with us directly.</p>
-<div class="actions"><a class="btn" href="booking.html">Request a booking</a><a class="btn alt" href="#rooms">See the rooms</a></div>
+<p class="lede">Breakfast is included, check-in is flexible, and you deal with us directly.</p>
+<p><a class="textlink" href="#rooms">See the rooms and rates</a></p>
+</div>
+<form class="avail" id="quick" action="booking.html" method="get">
+<h2>Plan your stay</h2>
+<div class="row">
+<label>Check-in<input type="date" id="q-checkin" name="checkin" required></label>
+<label>Check-out<input type="date" id="q-checkout" name="checkout" required></label>
+</div>
+<label>Guests<select name="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></label>
+<button class="btn block" type="submit">Continue to booking</button>
+</form>
 </div></div>
 
-<section id="rooms"><div class="wrap">
-<h2>Rooms</h2><p>Six rooms, each with its own bathroom, Wi-Fi and a desk. Rates are per room per night and include breakfast.</p>
-<div class="grid">
-<article class="room"><img src="images/garden-room.jpg" alt="Garden Room with a double bed and doors opening onto the garden" width="1200" height="750" loading="lazy"><div class="body"><h3>Garden Room</h3><p>Ground floor, opens onto the garden. Sleeps 2.</p><p class="price">R1,100 per night</p></div></article>
-<article class="room"><img src="images/jacaranda-room.jpg" alt="Jacaranda Room with a queen bed and a balcony" width="1200" height="750" loading="lazy"><div class="body"><h3>Jacaranda Room</h3><p>Upstairs, queen bed and a balcony. Sleeps 2.</p><p class="price">R1,250 per night</p></div></article>
-<article class="room"><img src="images/family-room.jpg" alt="Family Room with two beds and a sleeper couch" width="1200" height="750" loading="lazy"><div class="body"><h3>Family Room</h3><p>Two beds and a sleeper couch. Sleeps 4.</p><p class="price">R1,600 per night</p></div></article>
-</div></div></section>
+<section id="rooms"><div class="wrap split">
+<header><h2>Rooms</h2><p>Six rooms, each with its own bathroom, Wi-Fi and a desk. Rates are per room per night.</p></header>
+<div class="rooms">
+<article class="room">
+<img src="images/garden-room.jpg" alt="Garden Room with a double bed and doors opening onto the garden" width="1200" height="750" loading="lazy">
+<div><h3>Garden Room</h3><p>Ground floor, opens onto the garden. Sleeps 2.</p><a class="book" href="booking.html?room=Garden+Room">Book this room</a></div>
+<div class="rate"><strong>R1,100</strong><span>per night, breakfast included</span></div>
+</article>
+<article class="room">
+<img src="images/jacaranda-room.jpg" alt="Jacaranda Room with a queen bed and a balcony" width="1200" height="750" loading="lazy">
+<div><h3>Jacaranda Room</h3><p>Upstairs, queen bed and a balcony. Sleeps 2.</p><a class="book" href="booking.html?room=Jacaranda+Room">Book this room</a></div>
+<div class="rate"><strong>R1,250</strong><span>per night, breakfast included</span></div>
+</article>
+<article class="room">
+<img src="images/family-room.jpg" alt="Family Room with two beds and a sleeper couch" width="1200" height="750" loading="lazy">
+<div><h3>Family Room</h3><p>Two beds and a sleeper couch. Sleeps 4.</p><a class="book" href="booking.html?room=Family+Room">Book this room</a></div>
+<div class="rate"><strong>R1,600</strong><span>per night, breakfast included</span></div>
+</article>
+</div>
+</div></section>
 
-<section id="services" class="tint"><div class="wrap">
-<h2>Guest services</h2><p>Tell us what you need when you book and we will have it ready.</p>
+<section id="services" class="tint"><div class="wrap split">
+<header><h2>Guest services</h2><p>Tell us what you need when you book and we will have it ready.</p></header>
 <ul class="services">
 <li><strong>Breakfast and dietary needs</strong>Vegetarian, halaal, gluten-free and other requests.</li>
 <li><strong>Airport transfer</strong>Pick-up and drop-off at OR Tambo.</li>
 <li><strong>Late check-in</strong>Arriving after 20:00? Let us know.</li>
 <li><strong>Laundry</strong>Same-day wash and fold.</li>
-</ul></div></section>
-
-<section id="location"><div class="wrap">
-<h2>Location</h2>
-<p>Johannesburg, Gauteng. Replace this text with the street address, nearby landmarks and travel times to Sandton, Rosebank and OR Tambo.</p>
+</ul>
 </div></section>
 
-<section id="contact" class="tint"><div class="wrap">
-<h2>Contact</h2>
-<p>Phone: 011 034 9900<br>Email: <a href="mailto:jozi-haven@gmail.com">jozi-haven@gmail.com</a></p>
+<section id="stay-details"><div class="wrap split">
+<header><h2>Good to know</h2></header>
+<dl class="facts">
+<dt>Check-in</dt><dd>From 14:00. Late arrivals are welcome if we know in advance.</dd>
+<dt>Check-out</dt><dd>By 10:00.</dd>
+<dt>Breakfast</dt><dd>07:00 to 09:30, served in the dining room or on the patio.</dd>
+<dt>Parking</dt><dd>Secure on-site parking, free for guests.</dd>
+<dt>Power</dt><dd>Backup power keeps lights, Wi-Fi and the kitchen running during load-shedding.</dd>
+</dl>
+</div></section>
+
+<section id="location" class="tint"><div class="wrap split">
+<header><h2>Location</h2><p>Central Johannesburg, close to the Gautrain and the main business districts.</p></header>
+<div>
+<dl class="facts">
+<dt>Park Station</dt><dd>10 minutes by car</dd>
+<dt>Rosebank</dt><dd>15 minutes</dd>
+<dt>Sandton</dt><dd>20 minutes</dd>
+<dt>OR Tambo International</dt><dd>35 minutes</dd>
+</dl>
+<p class="fine">Typical off-peak drive times. We send the street address and directions with your booking confirmation.</p>
+</div>
+</div></section>
+
+<section id="contact"><div class="wrap split">
+<header><h2>Contact</h2><p>We reply to every message within one working day.</p></header>
+<div>
+<div class="contact-list">
+<div><h3>Phone</h3><p><a href="tel:+27110349900">011 034 9900</a></p></div>
+<div><h3>Email</h3><p><a href="mailto:jozi-haven@gmail.com">jozi-haven@gmail.com</a></p></div>
+</div>
 <a class="btn" href="booking.html">Request a booking</a>
+</div>
 </div></section>
-</main><footer><div class="wrap"><p>Jozi Haven Bed &amp; Breakfast and Guest House, Johannesburg, Gauteng</p></div></footer></body></html>
+</main>
+<footer><div class="wrap">
+<p>Jozi Haven Bed &amp; Breakfast and Guest House, Johannesburg, Gauteng.</p>
+<p>Demonstration project: all details are fictional. <a href="booking.html">Request a booking</a></p>
+</div></footer>
+<script src="js/main.js" defer></script>
+</body>
+</html>
